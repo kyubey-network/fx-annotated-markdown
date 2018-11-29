@@ -17,6 +17,7 @@ namespace Andoromeda.Framework.AnnotatedMarkdown
                 {
                     var colonPosition = x.IndexOf(':');
                     var key = x.Substring(0, colonPosition);
+                    key = key.Substring(2);
                     var value = colonPosition + 1 < x.Length ? x.Substring(colonPosition + 1) : null;
                     if (dic.ContainsKey(key)) 
                     {
